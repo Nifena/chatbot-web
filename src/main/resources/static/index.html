@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot Web</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Chatbot</h1>
+      <div class="status" id="status">Gotowy</div>
+    </header>
+
+    <main id="chat" class="chat" aria-live="polite" aria-label="Historia czatu">
+      <!-- Wiadomości będą dodawane dynamicznie -->
+    </main>
+
+    <form id="form" class="composer" autocomplete="off">
+      <input id="input" type="text" placeholder="Napisz wiadomość..." aria-label="Twoja wiadomość" required />
+      <button id="send" type="submit">Wyślij</button>
+    </form>
+  </div>
+
+  <template id="msg-user">
+    <div class="msg user">
+      <div class="avatar" aria-hidden="true">Ty</div>
+      <div class="bubble"></div>
+    </div>
+  </template>
+
+  <template id="msg-bot">
+    <div class="msg bot">
+      <div class="avatar" aria-hidden="true">AI</div>
+      <div class="bubble"></div>
+    </div>
+  </template>
+
+  <script src="/script.js"></script>
+</body>
+</html>
